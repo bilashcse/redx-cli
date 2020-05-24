@@ -1,0 +1,23 @@
+{
+  "name": "redx-cli",
+  "version": "0.0.1",
+  "description": "RedX Cli",
+  "main": "cli.js",
+  "scripts": {
+    "start": "node cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilashcse/redx-cli.git"
+  },
+  "author": "bilash <bilashcse@gmail.com> (https://github.com/bilashcse)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bilashcse/redx-cli/issues"
+  },
+  "homepage": "https://github.com/bilashcse/redx-cli#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "inquirer": "^7.1.0"
+  }
+}
