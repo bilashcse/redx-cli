@@ -18,6 +18,10 @@
   "homepage": "https://github.com/bilashcse/redx-cli#readme",
   "dependencies": {
     "axios": "^0.19.2",
-    "inquirer": "^7.1.0"
+    "inquirer": "^7.1.0",
+    "moment": "^2.26.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "table": "^5.4.6"
   }
 }

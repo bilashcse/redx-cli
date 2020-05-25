@@ -1,17 +1,21 @@
-const axios = require("axios");
+const rp = require("request-promise");
 
 const getAllShops = async (configs) => {
-  const url = `https://shopup.com.bd/v1/shop?isRedX=true`;
-  const result = await axios.get(url, {
-    "x-access-token": `Bearer ${configs.accessToken}`,
-  });
+  const options = {
+    uri: `https://shopup.com.bd/v1/shop?isRedX=true`,
+    headers: {
+      "x-access-token": `Bearer ${configs.accessToken}`,
+    },
+    json: true,
+  };
 
-  console.log(result.data);
-  if (!result.data.isError) {
-    console.log(result.data.body);
-    return result.data.body;
-  }
-  return null;
+  const result = await rp(options);
+    return result && !result.isError ? result.body.shops.map(p => {
+        return {
+            ID: p.ID,
+            SHOP_NAME: p.SHOP_NAME
+        }
+    }) : null;
 };
 
 module.exports = {

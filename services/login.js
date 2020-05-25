@@ -15,7 +15,6 @@ const requestForOtp = async (phoneNumber) => {
       valid: false,
     };
   }
-  console.log(result.data);
   return {
     valid: true,
     message: result.data.body.messages,
