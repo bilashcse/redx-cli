@@ -1,10 +1,13 @@
 {
   "name": "redx-cli",
   "version": "0.0.1",
-  "description": "RedX Cli",
+  "description": "RedX Cli application",
   "main": "cli.js",
   "scripts": {
     "start": "node cli.js"
+  },
+  "bin": {
+    "redx": "cli.js"
   },
   "repository": {
     "type": "git",
